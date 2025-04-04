@@ -18,7 +18,7 @@ router.get('/data', (req, res) => {
 router.post('/addEmployee', (req, res) => {
   const { first_name, last_name, email } = req.body;
   const query = 'INSERT INTO employees (first_name, last_name, email) VALUES (?, ?, ?)';
-  connection.query(query, [first_name, last_name, email], (error, results) => {
+    connection.query(query, [first_name, last_name, email], (error) => {
     if (error) {
       res.status(500).send('Error inserting data');
       return;
