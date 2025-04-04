@@ -3,7 +3,7 @@ const mysql = require('mysql');
 const dotenv = require('dotenv');
 
 dotenv.config();
-
+// Load environment variables from .env file
 const dbConfig = {
   development: {
     host: process.env.DEV_DB_HOST,
